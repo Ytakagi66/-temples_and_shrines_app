@@ -1,2 +1,0 @@
-class TemplesWordOfMouth < ApplicationRecord
-end

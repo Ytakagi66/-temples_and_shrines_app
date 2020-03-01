@@ -1,2 +1,0 @@
-class Temple < ApplicationRecord
-end

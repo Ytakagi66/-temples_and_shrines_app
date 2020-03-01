@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shrines Word Of Mouths</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Article</th>
+      <th>Photo</th>
+      <th>User</th>
+      <th>Shrine</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shrines_word_of_mouths.each do |shrines_word_of_mouth| %>
+      <tr>
+        <td><%= shrines_word_of_mouth.name %></td>
+        <td><%= shrines_word_of_mouth.article %></td>
+        <td><%= shrines_word_of_mouth.photo %></td>
+        <td><%= shrines_word_of_mouth.user_id %></td>
+        <td><%= shrines_word_of_mouth.shrine_id %></td>
+        <td><%= link_to 'Show', shrines_word_of_mouth %></td>
+        <td><%= link_to 'Edit', edit_shrines_word_of_mouth_path(shrines_word_of_mouth) %></td>
+        <td><%= link_to 'Destroy', shrines_word_of_mouth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shrines Word Of Mouth', new_shrines_word_of_mouth_path %>

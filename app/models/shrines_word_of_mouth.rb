@@ -1,0 +1,2 @@
+class ShrinesWordOfMouth < ApplicationRecord
+end

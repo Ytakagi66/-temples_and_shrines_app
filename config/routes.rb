@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :temples_word_of_mouths
+  resources :shrines_word_of_mouths
   resources :temples
   resources :user_ids
   resources :shrines

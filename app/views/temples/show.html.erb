@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @temple.name %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @temple.adress %>
+</p>
+
+<p>
+  <strong>Nearest station:</strong>
+  <%= @temple.nearest_station %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @temple.url %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @temple.photo %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @temple.location %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @temple.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_temple_path(@temple) %> |
+<%= link_to 'Back', temples_path %>

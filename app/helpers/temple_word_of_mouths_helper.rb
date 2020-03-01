@@ -1,0 +1,2 @@
+module TempleWordOfMouthsHelper
+end

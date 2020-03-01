@@ -10,7 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_01_090502) do
+ActiveRecord::Schema.define(version: 2020_03_01_091951) do
+
+  create_table "shrine_word_of_mouths", force: :cascade do |t|
+    t.string "name"
+    t.string "article"
+    t.string "photo"
+    t.string "user_id"
+    t.string "shrine_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shrines", force: :cascade do |t|
+    t.string "name"
+    t.string "adress"
+    t.string "nearest_station"
+    t.string "url"
+    t.string "photo"
+    t.string "location"
+    t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "temple_word_of_mouths", force: :cascade do |t|
+    t.string "name"
+    t.string "article"
+    t.string "photo"
+    t.string "user_id"
+    t.string "temple_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "temples", force: :cascade do |t|
+    t.string "name"
+    t.string "adress"
+    t.string "nearest_station"
+    t.string "url"
+    t.string "photo"
+    t.string "location"
+    t.string "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "user_ids", force: :cascade do |t|
     t.string "name"

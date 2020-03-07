@@ -1,0 +1,19 @@
+<div class="card mb-3" style="max-width: 700px; ">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="..." class="card-photo" alt="画像がありません">
+    </div>
+    <div class="col-md-8">
+        <div class="card-body">
+        <h5 class="card-name"><%= temple.name %></h5>
+        <p class="card-adress">所在地：<%= temple.adress %></p>
+        <p class="card-nearest_station">最寄り駅：<%= temple.nearest_station %></p>
+        <p class="card-url">URL：<%= temple.url %></p>
+        <p class="card-location">ロケーション：<%= temple.location %></p>
+    <%= link_to '詳細', temple, class: "btn btn-outline-primary" %>
+    <%= link_to '編集', edit_temple_path(temple), class: "btn btn-outline-primary" %>
+    <%= link_to '削除', temple, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -28,7 +28,7 @@ class TemplesController < ApplicationController
 
     respond_to do |format|
       if @temple.save
-        format.html { redirect_to @temple, notice: 'Temple was successfully created.' }
+        format.html { redirect_to @temple, notice: '新規登録が正常に完了しました。' }
         format.json { render :show, status: :created, location: @temple }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TemplesController < ApplicationController
   def update
     respond_to do |format|
       if @temple.update(temple_params)
-        format.html { redirect_to @temple, notice: 'Temple was successfully updated.' }
+        format.html { redirect_to @temple, notice: '正常に更新が完了しました' }
         format.json { render :show, status: :ok, location: @temple }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TemplesController < ApplicationController
   def destroy
     @temple.destroy
     respond_to do |format|
-      format.html { redirect_to temples_url, notice: 'Temple was successfully destroyed.' }
+      format.html { redirect_to temples_url, notice: '削除されました' }
       format.json { head :no_content }
     end
   end

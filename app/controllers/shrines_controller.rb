@@ -28,7 +28,7 @@ class ShrinesController < ApplicationController
 
     respond_to do |format|
       if @shrine.save
-        format.html { redirect_to @shrine, notice: '新規登録が正常に完了しました。' }
+        format.html { redirect_to @shrine, notice: '新規登録が正常に完了しました' }
         format.json { render :show, status: :created, location: @shrine }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ShrinesController < ApplicationController
   def update
     respond_to do |format|
       if @shrine.update(shrine_params)
-        format.html { redirect_to @shrine, notice: '更新が正常に完了しました。' }
+        format.html { redirect_to @shrine, notice: '正常に更新が完了しました' }
         format.json { render :show, status: :ok, location: @shrine }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ShrinesController < ApplicationController
   def destroy
     @shrine.destroy
     respond_to do |format|
-      format.html { redirect_to shrines_url, notice: '正常に削除されました。' }
+      format.html { redirect_to shrines_url, notice: '削除されました' }
       format.json { head :no_content }
     end
   end

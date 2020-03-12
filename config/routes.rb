@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/', to: 'home#top'
   resources :shrine_word_of_mouths
   resources :temple_word_of_mouths
   resources :temples

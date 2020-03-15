@@ -1,0 +1,53 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container{
+	position: relative;
+    display: block;    
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 100px;
+}
+
+.top_header{
+    width:100%;
+	height: calc(100vh - 60px);
+	position: relative;
+	background: url(daijogu.jpg) no-repeat center top;
+	background-size: cover;
+}
+
+.top_header h1{
+    top:150px;
+    position:relative;
+    color:white;
+    text-align: center;
+}
+
+.top_header p{
+    position:relative;
+    top:150px;
+    color:white;
+    text-align: center;
+}
+
+.top-main{
+    height:500px;
+    // background-color:red;
+}
+
+ul{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    display:flex;
+    background-color:brue;
+}
+
+.Prefectures li{
+    border-right: 1px solid #ccc;
+    margin-right: 8px;
+    padding-right: 8px;
+}

@@ -14,7 +14,7 @@ a {
 }
 
 .top-wrapper {
-  padding: 180px 0 100px 0;
+  padding: 180px 0 120px 0;
   background-image: url(daijogu.jpg);
   background-size: cover;
   color: white;
@@ -84,47 +84,55 @@ a {
   margin: 10px 0;
 }
 
+.selects{
+  margin:50px 50vh;
+  
+}
+
 .select {
   float: left;
   width: 25%;
+  margin-right:150px;
 }
 
 .select-shrine {
   position: relative;
-  // background-image: url(hodosanzinzya.jpg);
+  margin-right:10px;
 }
 
 .select-temple {
   position: relative;
-  // background-image: url(heijokyu.jpg);
+  margin-left:10px;
   width:100%;
   height:100%;
 }
 
 .select-shrine p {
+  margin-left:10px;
   position: absolute;
   top: 50px;
-  width: 50%;
+  width: 150%;
   color: white;
   text-align: center;
-  left:22%;
+  left:20%;
   font-size:50px;
   color:gold;
 }
 
 .select-temple p {
+  margin-left:10px;
   position: absolute;
   top: 50px;
-  width: 50%;
+  width: 150%;
   color: white;
   text-align: center;
-  left:22%;
+  left:20%;
   font-size:50px;
   color:gold;
 }
 
 .txt-contents {
-  width: 80%;
+  width: 120%;
   display: inline-block;
   margin-top: 20px;
   font-size: 12px;

@@ -15,9 +15,9 @@
  */
 
 main{
-  height:1500px;
+  height:100%;
   display: block;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100% - 160px);
   overflow: hidden;
 }
 
@@ -29,7 +29,6 @@ header {
 footer {
   height:60px;
   bottom:0;
-  padding: 30px;
   margin-top: auto;
   text-align: center;
   background-color: black;

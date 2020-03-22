@@ -11,8 +11,6 @@ class ShrinesController < ApplicationController
   # GET /shrines/1
   # GET /shrines/1.json
   def show
-    @shrine = Shrine.new
-    # @shrine = Shrine.find(params[:id])
   end
 
   # GET /shrines/new

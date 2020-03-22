@@ -5,11 +5,14 @@ class ShrinesController < ApplicationController
   # GET /shrines.json
   def index
     @shrines = Shrine.all
+    @shrine_name = @shrine_name
   end
 
   # GET /shrines/1
   # GET /shrines/1.json
   def show
+    @shrine = Shrine.new
+    # @shrine = Shrine.find(params[:id])
   end
 
   # GET /shrines/new
@@ -69,6 +72,6 @@ class ShrinesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shrine_params
-      params.require(:shrine).permit(:name, :adress, :nearest_station, :url, :photo, :location, :user_id)
+      params.require(:shrine).permit(:name, :adress, :nearest_station, :url, :photo, :location, :user_id,:description)
     end
 end

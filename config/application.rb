@@ -25,5 +25,6 @@ module TemplesAndShrines
       Devise::PasswordsController.layout "devise"
       HomeController.layout "home"
     end
+  config.i18n.default_locale = :ja  
   end
 end

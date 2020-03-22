@@ -4,13 +4,13 @@ class ShrinesController < ApplicationController
   # GET /shrines
   # GET /shrines.json
   def index
-    @shrines = Shrine.all
-    @shrine_name = @shrine_name
+    @shrine = Shrine.all
   end
 
   # GET /shrines/1
   # GET /shrines/1.json
   def show
+    @shrine = Shrine.find(params[:id])
   end
 
   # GET /shrines/new
@@ -65,7 +65,7 @@ class ShrinesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shrine
-      @shrine = Shrine.find(params[:id])
+      @shrine = Shrine.all
     end
 
     # Only allow a list of trusted parameters through.

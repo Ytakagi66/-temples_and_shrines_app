@@ -17,23 +17,23 @@
       <h5>紹介したい神社の情報を以下項目に記載して紹介しましょう</h5>
     </div>
     <div class="field form-group">
-      <%= form.label :name,"氏名" %>
-      <%= form.text_field :name, class:"form-control" %>
+      <%= form.label :name,"神社名" %>
+      <%= form.text_field :name, class:"form-control", :placeholder => '神社名' %>
     </div>
   
     <div class="field form-group">
       <%= form.label :adress,"所在地" %>
-      <%= form.text_field :adress, class:"form-control" %>
+      <%= form.text_field :adress, class:"form-control", :placeholder => '所在地'  %>
     </div>
   
     <div class="field form-group">
       <%= form.label :nearest_station,"最寄り駅" %>
-      <%= form.text_field :nearest_station, class:"form-control" %>
+      <%= form.text_field :nearest_station, class:"form-control", :placeholder => '最寄り駅'  %>
     </div>
   
     <div class="field form-group">
       <%= form.label :url ,"URL"%>
-      <%= form.text_field :url, class:"form-control" %>
+      <%= form.text_field :url, class:"form-control", :placeholder => 'URL'  %>
     </div>
   
     <div class="actions">

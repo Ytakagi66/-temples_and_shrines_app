@@ -1,4 +1,6 @@
 class Shrine < ApplicationRecord
+    mount_uploader :image, ImageUploader
+    attr_accessor :remember_token
     validates :name, presence: true
     validates :adress, presence: true
     validates :nearest_station, presence: true

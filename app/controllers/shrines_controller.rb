@@ -1,6 +1,6 @@
 class ShrinesController < ApplicationController
-  before_action :set_shrine, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_shrine, only: [:show, :edit, :update, :destroy, :index]
+ 
   # GET /shrines
   # GET /shrines.json
   def index
@@ -20,6 +20,7 @@ class ShrinesController < ApplicationController
 
   # GET /shrines/1/edit
   def edit
+    @shrine = Shrine.find(params[:id])
   end
 
   # POST /shrines
@@ -41,6 +42,7 @@ class ShrinesController < ApplicationController
   # PATCH/PUT /shrines/1
   # PATCH/PUT /shrines/1.json
   def update
+    @shrine = Shrine.find(params[:id])
     respond_to do |format|
       if @shrine.update(shrine_params)
         format.html { redirect_to @shrine, notice: '正常に更新が完了しました' }
@@ -70,6 +72,6 @@ class ShrinesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shrine_params
-      params.require(:shrine).permit(:name, :adress, :nearest_station, :url, :photo, :location, :user_id,:description)
+      params.require(:shrine).permit(:name, :adress, :nearest_station, :url, :photo, :location, :user_id,:description, :image)
     end
 end

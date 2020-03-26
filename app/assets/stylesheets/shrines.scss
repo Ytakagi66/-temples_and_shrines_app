@@ -231,15 +231,15 @@
 
 // showメソッド
 .shrine_show{
-  height:100vh;
-  margin:0 200px;
-  .mb-3{
-    text-align:center;
-    max-width:800px;
-    margin:0 50px;
-    height:90%;
-  }
+  height:100%;
+  margin:0;
+  width:100%;
   .col-md-4{
     margin-left:100px;
+  }
+  img{
+    width:400px;
+    height:300px;
+    left:300px;
   }
 }

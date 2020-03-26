@@ -1,19 +1,16 @@
-<div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <!--<img src="..." class="card-photo" alt="画像がありません">-->
       <%= image_tag @shrine.image.url if @shrine.image? %>
     </div>
     <div class="col-md-8">
-        <div class="card-body">
-        <h5 class="card-name"><%= shrine.name %></h5>
-        <p class="card-adress">所在地：<%= shrine.adress %></p>
-        <p class="card-nearest_station">最寄り駅：<%= shrine.nearest_station %></p>
-        <p class="card-url">URL：<%= shrine.url %></p>
-    <%= link_to '詳細', shrine, class: "btn btn-outline-primary" %>
-    <%= link_to '編集', edit_shrine_path(shrine), class: "btn btn-outline-primary" %>
-    <%= link_to '削除', shrine, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
-      </div>
+      <div class="card-body">
+      <h5 class="card-name"><%= shrine.name %></h5>
+      <p class="card-adress">所在地：<%= shrine.adress %></p>
+      <p class="card-nearest_station">最寄り駅：<%= shrine.nearest_station %></p>
+      <p class="card-url">URL：<%= shrine.url %></p>
+      <%= link_to '詳細', shrine, class: "btn btn-outline-primary" %>
+      <%= link_to '編集', edit_shrine_path(shrine), class: "btn btn-outline-primary" %>
+      <%= link_to '削除', shrine, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
     </div>
   </div>
 </div>

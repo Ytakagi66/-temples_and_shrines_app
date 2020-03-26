@@ -197,7 +197,7 @@
   margin: 0;
 }
 
-// 編集
+// 編集メソッド
 .shrine_edit_form{
   background-image:url('KUMAKICHI1027540_TP_V.jpg');
   background-size: cover;
@@ -226,5 +226,20 @@
       background-size: cover;
       color: white;
     }
+  }
+}
+
+// showメソッド
+.shrine_show{
+  height:100vh;
+  margin:0 200px;
+  .mb-3{
+    text-align:center;
+    max-width:800px;
+    margin:0 50px;
+    height:90%;
+  }
+  .col-md-4{
+    margin-left:100px;
   }
 }

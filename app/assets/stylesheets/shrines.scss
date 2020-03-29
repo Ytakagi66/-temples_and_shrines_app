@@ -232,8 +232,7 @@
 // showメソッド
 .shrine_show{
   height:100%;
-  margin:0;
-  width:100%;
+  margin:0 250px;
   .col-md-4{
     margin-left:100px;
   }
@@ -242,4 +241,8 @@
     height:300px;
     left:300px;
   }
+}
+
+.row no-gutters{
+    background-color:black;
 }

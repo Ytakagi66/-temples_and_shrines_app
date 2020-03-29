@@ -25,79 +25,16 @@
 <div class="shrine_slider_ttl">  
   <h1 class="slider_ttl">神社一覧</h1>
   <ul class="horizontal_scroll rank">
+    <% @shrines.each do|shrine| %>
     <li>
-      <a href="" class="shrine_photo"><img src=""></a>
+      <a href="" class="shrine_photo">
+        <%= image_tag "/uploads/shrine/image/#{shrine[:id]}/#{shrine[:image]}" %></a>
       <div class="shrine_name">
-        <span><%= @shrine[0]['name'] %></span>
+        <span><%= shrine[:name] %></span>
       </div>
     </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span><%= @shrine[1]['name'] %></span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span><%= @shrine[2]['name'] %></span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span><%= @shrine[2]['name'] %></span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span>神社名</span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span>神社名</span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span>神社名</span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span>神社名</span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span>神社名</span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span>神社名</span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span>神社名</span>
-      </div>
-    </li>
-    <li>
-      <a href="" class="shrine_photo"><img src=""></a>
-      <div class="shrine_name">
-        <span>神社名</span>
-      </div>
-    </li>        
   </ul>
+  <% end %>
 </div>
 
 <%= link_to '新規登録', new_shrine_path %>

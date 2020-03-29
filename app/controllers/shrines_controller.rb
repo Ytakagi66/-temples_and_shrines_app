@@ -4,7 +4,7 @@ class ShrinesController < ApplicationController
   # GET /shrines
   # GET /shrines.json
   def index
-    @shrine = Shrine.all
+    @shrines = Shrine.all
   end
 
   # GET /shrines/1

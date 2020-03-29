@@ -31,7 +31,7 @@ class ShrinesController < ApplicationController
     respond_to do |format|
       if @shrine.save
         format.html { redirect_to @shrine, notice: '新規登録が正常に完了しました' }
-        format.json { render :show, status: :created, location: @shrine }
+        format.json { render :show, status: :created, image: @shrine }
       else
         format.html { render :new }
         format.json { render json: @shrine.errors, status: :unprocessable_entity }
@@ -46,7 +46,7 @@ class ShrinesController < ApplicationController
     respond_to do |format|
       if @shrine.update(shrine_params)
         format.html { redirect_to @shrine, notice: '正常に更新が完了しました' }
-        format.json { render :show, status: :ok, location: @shrine }
+        format.json { render :show, status: :ok, image: @shrine }
       else
         format.html { render :edit }
         format.json { render json: @shrine.errors, status: :unprocessable_entity }

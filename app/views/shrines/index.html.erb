@@ -24,17 +24,16 @@
 
 <div class="shrine_slider_ttl">  
   <h1 class="slider_ttl">神社一覧</h1>
-  <ul class="horizontal_scroll rank">
+  <ul class="horizontal_scroll">
     <% @shrines.each do|shrine| %>
     <li>
-      <a href="" class="shrine_photo">
-        <%= image_tag "/uploads/shrine/image/#{shrine[:id]}/#{shrine[:image]}" %></a>
-      <div class="shrine_name">
+      <%= link_to "shrines/#{shrine[:id]}", class:"shrine_photo" do %>
+        <%= image_tag "/uploads/shrine/image/#{shrine[:id]}/#{shrine[:image]}" %>
         <span><%= shrine[:name] %></span>
-      </div>
+        <% end %>
     </li>
+      <% end %>
   </ul>
-  <% end %>
 </div>
 
 <%= link_to '新規登録', new_shrine_path %>

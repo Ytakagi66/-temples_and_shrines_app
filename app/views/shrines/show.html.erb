@@ -1,5 +1,6 @@
 <div class="shrine_show">
     <div class="col-md-8">
+      <%= image_tag @shrine.image.url %>      
       <div class="card-body">
       <h5 class="card-name"><%= @shrine[:name] %></h5>
       <p class="card-adress">所在地：<%= @shrine[:adress] %></p>

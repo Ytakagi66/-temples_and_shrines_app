@@ -6,5 +6,4 @@ class Shrine < ApplicationRecord
     validates :article, null: false
     validates :location, null: false
     validates :user_id, null: false
-    get "login" => "users#login-submit"
 end

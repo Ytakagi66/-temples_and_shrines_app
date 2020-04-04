@@ -5,28 +5,28 @@
     <% @shrines.each do|shrine| %>
     <li>
       <%= image_tag "/uploads/shrine/image/#{shrine[:id]}/#{shrine[:image]}" %>
+      <div class="shrine_infomation">
+        <p>名称：<%= shrine[:name] %></p>
+        <p>所在地：<%= shrine[:adress] %></p>    
+        <p><%= shrine[:name] %>について</p>
+        <p><%= simple_format(shrine[:article]) %></p>
+        <p>URL:<%= link_to(shrine[:url],shrine[:url]) %></p>
+        <p></p>    
+      </div>
     </li>
     <% end %>
   </ul>
-  <div class="shrine_infomation">
-    <p></p>
-    <p></p>    
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>    
-  </div>
 </div>
 
 <div class="shrine_slider_ttl">  
   <h1 class="slider_ttl">神社一覧</h1>
-  <ul class="horizontal_scroll">
+  <ul class="horizontal_scroll" >
     <% @shrines.each do|shrine| %>
-    <li>
+    <li class="shrine_thumbnail">
+      <img id="mypic" onclick="slideshow()" src="<%= "/uploads/shrine/image/#{shrine[:id]}/#{shrine[:image]}" %>">
       <%= link_to "shrines/#{shrine[:id]}", class:"shrine_photo" do %>
-        <%= image_tag "/uploads/shrine/image/#{shrine[:id]}/#{shrine[:image]}" %>
         <span><%= shrine[:name] %></span>
-        <% end %>
+      <% end %>
     </li>
       <% end %>
   </ul>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_23_161357) do
+ActiveRecord::Schema.define(version: 2020_04_04_133907) do
 
   create_table "installs", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2020_03_23_161357) do
   create_table "shrines", force: :cascade do |t|
     t.string "name"
     t.string "adress"
-    t.string "nearest_station"
     t.string "url"
     t.string "photo"
     t.string "location"
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_03_23_161357) do
     t.datetime "updated_at", null: false
     t.string "description"
     t.string "image"
+    t.string "article"
   end
 
   create_table "temple_word_of_mouths", force: :cascade do |t|

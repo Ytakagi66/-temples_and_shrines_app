@@ -72,6 +72,6 @@ class ShrinesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shrine_params
-      params.require(:shrine).permit(:name, :adress, :nearest_station, :url, :photo, :location, :user_id,:description, :image)
+      params.require(:shrine).permit(:name, :adress, :article, :url, :photo, :location, :user_id,:description, :image)
     end
 end

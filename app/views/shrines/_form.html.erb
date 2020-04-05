@@ -38,6 +38,18 @@
       <%= form.text_area :article, class:"form-control", :placeholder => '記事'  %>
     </div>
     
+    <div class="field form-group">
+      <%= form.label :god,"祭神" %>
+      <%= form.text_area :god, class:"form-control", :placeholder => '祭神'  %>
+    </div>
+    
+    <div class="field form-group">
+      <%= form.label :goshuin,"御朱印有無" %>      
+    <%= form_for @shrine do |f| %>
+       <%= f.select :goshuin, [["あり", "あり"], ["なし", "なし"]], include_blank: "選択して下さい" %>
+    <% end %>    
+    </div>
+    
     <div class="actions">
       <%= form.submit class: "btn btn-primary" %>
     </div>

@@ -10,43 +10,48 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="container">
+    <div class="row header">
+      <h1>寺院情報の共有</h1>
+      <h5>紹介したい神社の情報を以下項目に記載して紹介しましょう</h5>
+    </div>
+      <%= form.label :image, '画像の選択' %>
+      <%= form.file_field :image %>
+    <div class="field form-group">
+      <%= form.label :name,"寺院名" %>
+      <%= form.text_field :name, class:"form-control", :placeholder => '寺院名' %>
+    </div>
+  
+    <div class="field form-group">
+      <%= form.label :adress,"所在地" %>
+      <%= form.text_field :adress, class:"form-control", :placeholder => '所在地'  %>
+    </div>
+  
+    <div class="field form-group">
+      <%= form.label :url ,"URL"%>
+      <%= form.text_field :url, class:"form-control", :placeholder => 'URL'  %>
+    </div>
 
-  <div class="field form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class:"form-control" %>
-  </div>
-
-  <div class="field form-group">
-    <%= form.label :adress %>
-    <%= form.text_field :adress, class:"form-control" %>
-  </div>
-
-  <div class="field form-group">
-    <%= form.label :nearest_station %>
-    <%= form.text_field :nearest_station, class:"form-control" %>
-  </div>
-
-  <div class="field form-group">
-    <%= form.label :url %>
-    <%= form.text_field :url, class:"form-control" %>
-  </div>
-
-  <div class="field form-group">
-    <%= form.label :photo %>
-    <%= form.text_field :photo, class:"form-control" %>
-  </div>
-
-  <div class="field form-group">
-    <%= form.label :location %>
-    <%= form.text_field :location, class:"form-control" %>
-  </div>
-
-  <div class="field form-group">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, class:"form-control" %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit class: "btn btn-primary" %>
+    <div class="field form-group">
+      <%= form.label :article,"記事" %>
+      <%= form.text_area :article, class:"form-control", :placeholder => '記事'  %>
+    </div>
+    
+    <div class="field form-group">
+      <%= form.label :god,"仏様" %>
+      <%= form.text_area :god, class:"form-control", :placeholder => '仏様'  %>
+    </div>
+    
+    <div class="field form-group">
+      <%= form.label :goshuin,"御朱印有無" %>      
+    <%= form_for @temple do |f| %>
+       <%= f.select :goshuin, [["あり", "あり"], ["なし", "なし"]], include_blank: "選択して下さい" %>
+    <% end %>    
+    </div>
+    
+    <div class="actions">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

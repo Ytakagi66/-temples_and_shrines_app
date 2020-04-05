@@ -1,7 +1,11 @@
 class Temple < ApplicationRecord
+    mount_uploader :image, ImageUploader, null: false
+    attr_accessor :remember_token    
     validates :name, presence: true
     validates :adress, presence: true
-    validates :nearest_station, presence: true
-    validates :location, presence: true
-    validates :user_id, presence: true
+    validates :nearest_station, null: false
+    validates :location, null: false
+    validates :user_id, null: false
+    validates :gosyuin, null: false
+    validates :god, null: false    
 end

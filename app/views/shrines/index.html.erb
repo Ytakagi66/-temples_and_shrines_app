@@ -1,15 +1,17 @@
 <div class="shrine_index">
-<h1>神社</h1>
+<h1>神社一覧</h1>
 <div class="shrine_item">
   <ul class="slider">
     <% @shrines.each do|shrine| %>
     <li>
       <%= image_tag "/uploads/shrine/image/#{shrine[:id]}/#{shrine[:image]}" %>
       <div class="shrine_infomation">
-        <p>名称：<%= shrine[:name] %></p>
-        <p>所在地：<%= shrine[:adress] %></p>    
-        <p><%= shrine[:name] %>について</p>
+        <h2 class="shrine_name">名称：<%= shrine[:name] %></h2>
+        <h3>概要</h3>
         <p><%= simple_format(shrine[:article]) %></p>
+        <p>御祭神：<br><%= shrine[:god] %></p>
+        <p>御朱印：<%= shrine[:goshuin] %></p>
+        <p>所在地：<%= shrine[:adress] %></p>    
         <p>URL:<%= link_to(shrine[:url],shrine[:url]) %></p>
         <p></p>    
       </div>

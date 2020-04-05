@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_04_05_103137) do
+=======
+ActiveRecord::Schema.define(version: 2020_04_04_181751) do
+>>>>>>> 0fa44c41fa40d9564c1b13388bd8a9df3f581a7b
 
   create_table "installs", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -24,16 +28,6 @@ ActiveRecord::Schema.define(version: 2020_04_05_103137) do
     t.index ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
   end
 
-  create_table "shrine_word_of_mouths", force: :cascade do |t|
-    t.string "name"
-    t.string "article"
-    t.string "photo"
-    t.string "user_id"
-    t.string "shrine_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "shrines", force: :cascade do |t|
     t.string "name"
     t.string "adress"
@@ -45,17 +39,8 @@ ActiveRecord::Schema.define(version: 2020_04_05_103137) do
     t.datetime "updated_at", null: false
     t.string "description"
     t.string "image"
+    t.json "images"
     t.string "article"
-  end
-
-  create_table "temple_word_of_mouths", force: :cascade do |t|
-    t.string "name"
-    t.string "article"
-    t.string "photo"
-    t.string "user_id"
-    t.string "temple_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "temples", force: :cascade do |t|
@@ -70,26 +55,34 @@ ActiveRecord::Schema.define(version: 2020_04_05_103137) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_ids", force: :cascade do |t|
-    t.string "name"
-    t.string "old"
-    t.string "email"
-    t.integer "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.datetime "to_Model"
+=======
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
+>>>>>>> 0fa44c41fa40d9564c1b13388bd8a9df3f581a7b
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
 end

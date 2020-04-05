@@ -1,16 +1,26 @@
 <main>
-    <form class="login-form">
+  <form class="login-form">
     <p class="login-text">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-lock fa-stack-1x"></i>
       </span>
     </p>
-    <input type="email" class="login-username" autofocus="true" required="true" placeholder="Email" />
-    <input type="password" class="login-password" required="true" placeholder="Password" />
-    <input type="submit" name="Login" value="ログイン" class="login-submit" />
-  </form>
-  <a href="#" class="login-forgot-pass">パスワードを忘れた方はこちら</a>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.email_field :email, value:"メールアドレス",autofocus: true, autocomplete: "email", class: 'login-username' %>
+        <%= f.password_field :password, value:"パスワード表示",autocomplete: "password", class: 'login-password' %>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+  
+      <%= f.submit "ログイン" ,class:"login-submit"%>
+  <% end %>
+    </form>
+  <%= render "users/shared/links" %>
   <div class="underlay-photo"></div>
-  <div class="underlay-black"></div> 
+  <div class="underlay-black"></div>
 </main>

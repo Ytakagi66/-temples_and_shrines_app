@@ -1,17 +1,28 @@
 <main>
-    <form class="login-form">
-    <p class="login-text">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-user-plus fa-stack-1x"></i>
-      </span>
-    </p>
-    <input type="text" class="login-username" autofocus="true" required="true" placeholder="氏名" />
-    <input type="email" class="login-username" autofocus="true" required="true" placeholder="Email" />
-    <input type="password" class="login-password" required="true" placeholder="Password" />
-    <input type="submit" name="Login" value="Login" class="login-submit" />
-  </form>
-  <a href="#" class="login-forgot-pass">forgot password?</a>
+  <form class="login-form">
+  <p class="login-text">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-user-plus fa-stack-1x"></i>
+    </span>
+  </p>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+    <%= f.email_field :email,value:"メールアドレス", autofocus: true, autocomplete: "email",class:"login-username" %>
+    <%= f.label "パスワード" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> 文字以上)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password",class:"login-password" %>
+
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"login-password" %>
+
+  <div class="actions">
+    <%= f.submit "Sign up",class:"login-submit" %>
+  </div>
+<% end %>
   <div class="underlay-photo"></div>
   <div class="underlay-black"></div> 
-</main>
+<%= render "users/shared/links" %>
